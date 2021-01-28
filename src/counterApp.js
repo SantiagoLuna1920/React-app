@@ -15,15 +15,27 @@ const CounterApp = () => {
 
     const HandleGrade = () => {
         const inputV = document.querySelector(".inputV").value;
+        if (inputV!=0) {
         setName(Grados)
         setValue((parseInt(inputV)*Math.PI/180) + " Rad")
+        } else {
+            setName(Grados)
+            setValue(0 + " Rad")
+    
+            }
     }
 
     const HandleRadian = () => {
         const inputV = document.querySelector(".inputV").value;
+        if (inputV!=0) {
         setName(Radian)
         setValue((parseInt(inputV)*180/Math.PI) + " °C")
         console.log(inputV)
+        } else {
+            setName(Radian)
+        setValue(0 + " °C")
+
+        }
     }
 
     return (
